@@ -1,0 +1,32 @@
+ext {
+    libs = ['coreKtx'            : "androidx.core:core-ktx:1.6.0",
+            'lifecycleRuntimeKtx': "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1",
+            'activityCompose'    : "androidx.activity:activity-compose:1.7.1",
+            'composeBom'         : "androidx.compose:compose-bom:2022.10.00",
+            'ui'                 : "androidx.compose.ui:ui",
+            'uiGraphics'         : "androidx.compose.ui:ui-graphics",
+            'uiToolingPreview'   : "androidx.compose.ui:ui-tooling-preview",
+            'material3'          : "androidx.compose.material3:material3",
+            'koin'               : 'io.insert-koin:koin-core:3.4.0',
+            'koinAndroid'        : 'io.insert-koin:koin-android:3.4.0',
+            'koinCompose'        : "io.insert-koin:koin-androidx-compose:3.4.4",
+            'room'               : "androidx.room:room-runtime:2.4.1",
+            'roomCompiler'       : "androidx.room:room-compiler:2.4.1",
+
+            // testImplementation
+            'junit'              : "junit:junit:4.13.2",
+            'mockk'              : "io.mockk:mockk:1.13.5",
+            'coroutinesTest'     : "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1",
+            'koinTest'           : "io.insert-koin:koin-test:3.4.0",
+            'koinTestJunit'      : "io.insert-koin:koin-test-junit4:3.4.0",
+
+            // androidTestImplementation
+            'junitExt'           : "androidx.test.ext:junit:1.1.5",
+            'espresso'           : "androidx.test.espresso:espresso-core:3.5.1",
+            'junitCompose'       : "androidx.compose.ui:ui-test-junit4",
+            'mockkAndroid'       : "io.mockk:mockk-android:1.13.5",
+
+            // debugImplementation
+            'composeUiTooling'   : "androidx.compose.ui:ui-tooling",
+            'composeTestManifest': "androidx.compose.ui:ui-test-manifest",]
+}
