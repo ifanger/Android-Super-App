@@ -13,10 +13,14 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/dependencies" />
+            <option value="$PROJECT_DIR$/core/design-system" />
             <option value="$PROJECT_DIR$/core/infrastructure" />
-            <option value="$PROJECT_DIR$/market" />
-            <option value="$PROJECT_DIR$/market/domain" />
-            <option value="$PROJECT_DIR$/market/impl" />
+            <option value="$PROJECT_DIR$/core/router" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/market" />
+            <option value="$PROJECT_DIR$/features/market/domain" />
+            <option value="$PROJECT_DIR$/features/market/market" />
+            <option value="$PROJECT_DIR$/home" />
           </set>
         </option>
       </GradleProjectSettings>

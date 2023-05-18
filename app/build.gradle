@@ -51,7 +51,10 @@ android {
 dependencies {
     implementation project(":core:dependencies")
     implementation project(":core:infrastructure")
+    implementation project(":core:design-system")
+    implementation project(":core:router")
 
-    implementation project(":market:domain")
-    implementation project(":market:impl")
+    implementation project(":home")
+    implementation project(":features:market:domain")
+    implementation project(":features:market:market")
 }

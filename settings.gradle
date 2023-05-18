@@ -14,8 +14,12 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Super App"
+
 include ':app'
-include ':market:domain'
-include ':market:impl'
-include ':core:dependencies'
-include ':core:infrastructure'
+
+include ':core:dependencies', ':core:infrastructure'
+
+include ':features:market:domain', ':features:market:market'
+include ':core:router'
+include ':home'
+include ':core:design-system'

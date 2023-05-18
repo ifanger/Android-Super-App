@@ -1,41 +1,41 @@
 package com.ifanger.superapp
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.ifanger.superapp.ui.theme.SuperAppTheme
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.ifanger.designsystem.components.activity.BaseActivity
+import com.ifanger.router.home.HomeRouter
+import org.koin.android.ext.android.inject
 
-class MainActivity : ComponentActivity() {
+class MainActivity : BaseActivity() {
 
-    private val viewModel: MainViewModel by viewModel()
+    private val homeRouter: HomeRouter by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.load()
 
-        setContent {
-            SuperAppTheme {
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    val state = viewModel.state.collectAsState()
+        startHomeActivity()
+    }
 
-                    when (val currentState = state.value) {
-                        is MainViewModel.State.Loading -> {
-                            Text(text = "Loading...")
-                        }
+    private fun startHomeActivity() {
+        homeRouter.getHomeActivity(this).run {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(this)
+        }
+    }
 
-                        is MainViewModel.State.Success -> {
-                            Text(text = "Success: ${currentState.items}")
-                        }
-                    }
-                }
-            }
+    @Composable
+    override fun Content() {
+        Surface(
+            color = MaterialTheme.colorScheme.background,
+            modifier = Modifier.fillMaxSize(),
+        ) {
+            Text(text = "Hello World!",)
         }
     }
 }
