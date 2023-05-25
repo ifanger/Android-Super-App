@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -10,16 +11,19 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-
     }
 }
+
 rootProject.name = "Super App"
 
 include ':app'
 
-include ':core:dependencies', ':core:infrastructure'
-
-include ':features:market:domain', ':features:market:market'
-include ':core:router'
-include ':home'
+include ':core:dependencies'
 include ':core:design-system'
+include ':core:infrastructure'
+include ':core:router'
+
+include ':home'
+
+include ':features:market:domain'
+include ':features:market:market'
